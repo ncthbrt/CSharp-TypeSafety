@@ -6,7 +6,7 @@ using System.Diagnostics.Contracts;
 namespace Safety
 {
   [Serializable]
-  public sealed struct Domain<UnderlyingType, Pred>
+  public struct Domain<UnderlyingType, Pred>
       where Pred : Pred<UnderlyingType>, new()
   {
     internal static Pred Predicate = new Pred();
